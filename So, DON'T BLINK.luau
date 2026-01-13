@@ -51,7 +51,7 @@ MyCustomSound.Volume = Config.Volume
 MyCustomSound.Looped = false 
 MyCustomSound.Parent = SoundService
 
--- 3. PRELOAD A UDIO
+-- 3. PRELOAD AUDIO
 warn("[Script] Preloading 'So, DON'T BLINK'...")
 local start = tick()
 ContentProvider:PreloadAsync({MyCustomSound})
@@ -64,7 +64,7 @@ local TargetSound = ReplicatedStorage:WaitForChild("ClientAssets")
     :WaitForChild("Game")
     :WaitForChild("Round")
     :WaitForChild("SoloTheme")
-    :WaitForChild("SonicSolo")
+    :WaitForChild("SonicSolo") -- change depending on the character, for example TailsSolo, KnucklesSolo, etc.
 
 local GameState = Workspace:WaitForChild("GameProperties")
     :WaitForChild("State")

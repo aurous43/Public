@@ -5,14 +5,14 @@ local ContentProvider = game:GetService("ContentProvider")
 
 -- ================= CONFIGURATION ================= --
 local Config = {
-    -- DIRECT link to the .mp3 file
+    -- DIRECT link to the .mp3 file, you can use Discord or Github links like i did
     Url = "https://github.com/aurous43/Public/raw/refs/heads/main/So,%20DON'T%20BLINK.mp3", 
     
     -- The name to save the file as in your workspace folder
     FileName = "So, DON'T BLINK.mp3",
 
     -- Delay before playing the song
-    DelayBeforePlay = 0, -- Set to 0 for instant sync since we are preloading
+    DelayBeforePlay = 0,
 
     -- Time to skip to (in seconds) when the LMS ends
     SkipToTime = 248,
@@ -89,7 +89,7 @@ local function onTargetPlayChanged()
     end
 end
 
--- 6. Lms End/"RE" State Logic
+-- 6. LMS End/"RE" State Logic
 GameState:GetPropertyChangedSignal("Value"):Connect(function()
     if GameState.Value == "RE" then
         if MyCustomSound.IsPlaying then
@@ -106,3 +106,4 @@ TargetSound:GetPropertyChangedSignal("Playing"):Connect(onTargetPlayChanged)
 if TargetSound.Playing then
     onTargetPlayChanged()
 end
+

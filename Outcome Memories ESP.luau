@@ -23,6 +23,7 @@ local CHARACTER_COLORS = {
 	MetalSonic = Color3.fromRGB(1, 1, 193),
 	Silver = Color3.fromRGB(255, 255, 255),
 	Blaze = Color3.fromRGB(184, 131, 255),
+    Shadow = Color3.fromRGB(128, 128, 128),
 }
 
 local function getCharacterColor(model, fallback)
